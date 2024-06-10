@@ -7,9 +7,9 @@ services:
     volumes:
       - ./pgdata:/var/lib/postgresql/data
     expose:
-      - "5434" # Publishes 5433 to other containers but NOT to host machine
+      - 5434
     ports:
-     - "5434:5434"
+     - 5434:5434
     command: -p 5434
   linkwarden:
     env_file: .env
